@@ -1,6 +1,8 @@
 import React from "react";
 import "./MainSection.css";
 import { BiSearch } from "react-icons/bi";
+import { IoMdAdd } from "react-icons/io";
+import Card from "./components/Card";
 
 const MainSection = () => {
   return (
@@ -10,8 +12,22 @@ const MainSection = () => {
         <div className="employee-header">
           <div className="search-box">
             <input type="text" placeholder="Search here" />
-            <BiSearch />
+            <BiSearch size={20} />
           </div>
+          <button className="add-btn">
+            <IoMdAdd />
+            Add Employee
+          </button>
+        </div>
+        <div className="employees">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </main>
