@@ -1,0 +1,26 @@
+.main-container {
+  margin-left: 19rem;
+  margin-top: 4rem;
+}
+
+.main-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.main-wrapper > h1 {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  background-color: #ecedf6;
+  height: 2rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
