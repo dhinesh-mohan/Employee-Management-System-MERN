@@ -1,6 +1,6 @@
 import "./App.css";
-import MainSection from "./MainSection/MainSection";
 import LeftNav from "./components/LeftNav/LeftNav";
+import MainSection from "./components/MainSection/MainSection";
 import TopNav from "./components/TopNav/TopNav";
 
 function App() {
