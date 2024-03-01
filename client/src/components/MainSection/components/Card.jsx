@@ -22,7 +22,7 @@ const Card = () => {
         </div>
         <div className="profileImg">
           <img
-            src="https://media.istockphoto.com/id/1427580184/photo/winter-forest-snow-landscape-in-the-night-lapland-finland.webp?b=1&s=170667a&w=0&k=20&c=L9Mz6QPdzwxeKK_ht8h91y4V4faStt9pQWd3moB0CKM="
+            src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D"
             alt=""
           />
         </div>

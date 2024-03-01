@@ -10,7 +10,7 @@ const MainSection = () => {
 
   return (
     <>
-      {showModal && <ModelPopup />}
+      {showModal && <ModelPopup setShowModal={setShowModal} />}
       <main className="main-container">
         <div className="main-wrapper">
           <h1>People</h1>
