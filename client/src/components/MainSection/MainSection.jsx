@@ -8,6 +8,7 @@ import axios from "axios";
 
 const MainSection = ({ setEmployeeId }) => {
   const [showModal, setShowModal] = useState(false);
+  const [reRender, setRerender] = useState(false);
   const [employees, setEmployees] = useState([]);
 
   const getAllEmployees = async () => {
@@ -19,9 +20,13 @@ const MainSection = ({ setEmployeeId }) => {
     }
   };
 
+  const handleReRender = () => {
+    setRerender(true);
+  };
+
   useEffect(() => {
     getAllEmployees();
-  }, []);
+  }, [reRender]);
 
   return (
     <>
@@ -44,7 +49,7 @@ const MainSection = ({ setEmployeeId }) => {
               employees.map((emp) => {
                 return (
                   <div key={emp._id} onClick={() => setEmployeeId(emp._id)}>
-                    <Card empData={emp} />
+                    <Card empData={emp} handleReRender={handleReRender} />
                   </div>
                 );
               })}

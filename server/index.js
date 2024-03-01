@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import createEmployee from "./routes/createEmployee.js";
 import getEmployees from "./routes/getEmployees.js";
 import getEmployeeById from "./routes/getEmployeeById.js";
+import deleteEmployee from "./routes/deleteEmployee.js";
 import cors from "cors";
 
 dotenv.config();
@@ -22,5 +23,6 @@ mongoose
 app.use("/employee", createEmployee);
 app.use("/employee", getEmployees);
 app.use("/employee", getEmployeeById);
+app.use("/employee", deleteEmployee);
 
 app.listen(PORT, () => console.log(`server listening on port ${PORT}`));

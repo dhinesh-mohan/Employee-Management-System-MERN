@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import axios from "axios";
 
-const Card = ({ empData }) => {
+const Card = ({ empData, handleReRender }) => {
   const [dropDown, setDropDown] = useState(false);
+
+  const handleDelete = async (id) => {
+    try {
+      const res = await axios.delete(`http://localhost:5000/employee/${id}`);
+      handleReRender();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="card-component">
@@ -15,8 +25,10 @@ const Card = ({ empData }) => {
           />
           {dropDown && (
             <ul className="dropdown">
-              <li>Edit</li>
-              <li id="dlt">Delete</li>
+              <li onClick={() => handleEdit(empData._id)}>Edit</li>
+              <li onClick={() => handleDelete(empData._id)} id="dlt">
+                Delete
+              </li>
             </ul>
           )}
         </div>

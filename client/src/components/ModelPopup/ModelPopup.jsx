@@ -65,7 +65,7 @@ const ModelPopup = ({ setShowModal }) => {
               <div className="input-box">
                 <label>Image</label>
                 <input
-                  type="text"
+                  type="file"
                   name="image"
                   values={formik.values.image}
                   onChange={formik.handleChange}
