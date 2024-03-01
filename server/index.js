@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import createEmployee from "./routes/createEmployee.js";
+import getEmployees from "./routes/getEmployees.js";
+import getEmployeeById from "./routes/getEmployeeById.js";
 import cors from "cors";
 
 dotenv.config();
@@ -18,5 +20,7 @@ mongoose
   .catch((err) => console.log("MongoDB connection error:", err));
 
 app.use("/employee", createEmployee);
+app.use("/employee", getEmployees);
+app.use("/employee", getEmployeeById);
 
 app.listen(PORT, () => console.log(`server listening on port ${PORT}`));

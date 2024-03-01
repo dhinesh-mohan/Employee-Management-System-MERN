@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-const Card = () => {
+const Card = ({ empData }) => {
   const [dropDown, setDropDown] = useState(false);
 
   return (
@@ -21,18 +21,17 @@ const Card = () => {
           )}
         </div>
         <div className="profileImg">
-          <img
-            src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D"
-            alt=""
-          />
+          <img src={empData.image} alt="Employee Image" />
         </div>
         <div className="emp-detail">
-          <h3>Firstname Lastname</h3>
-          <p>Email</p>
+          <h3>
+            {empData.firstname} {empData.lastname}
+          </h3>
+          <p>{empData.email}</p>
         </div>
       </div>
       <div className="job-role">
-        <p>Job Role</p>
+        <p>{empData.job}</p>
       </div>
     </div>
   );

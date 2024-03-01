@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MainSection.css";
 import { BiSearch } from "react-icons/bi";
 import { IoMdAdd } from "react-icons/io";
 import Card from "./components/Card";
 import ModelPopup from "../ModelPopup/ModelPopup";
+import axios from "axios";
 
-const MainSection = () => {
+const MainSection = ({ setEmployeeId }) => {
   const [showModal, setShowModal] = useState(false);
+  const [employees, setEmployees] = useState([]);
+
+  const getAllEmployees = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/employee");
+      setEmployees(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAllEmployees();
+  }, []);
 
   return (
     <>
@@ -25,14 +40,14 @@ const MainSection = () => {
             </button>
           </div>
           <div className="employees">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {employees &&
+              employees.map((emp) => {
+                return (
+                  <div key={emp._id} onClick={() => setEmployeeId(emp._id)}>
+                    <Card empData={emp} />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </main>

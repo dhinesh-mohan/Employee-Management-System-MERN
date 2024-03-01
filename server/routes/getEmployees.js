@@ -1,15 +1,13 @@
 import express from "express";
 import Employee from "../schema/Employee.js";
-
 const route = express.Router();
 
-route.post("/", async (req, res) => {
+route.get("/", async (req, res) => {
   try {
-    const employee = new Employee(req.body);
-    await employee.save();
-    res.status(201).send(employee);
+    const employees = await Employee.find();
+    res.json(employees);
   } catch (error) {
-    console.log("Error in createEmployee", error);
+    console.log("Error in getEmployees", error);
     res.status(500).send("Internal server error");
   }
 });
