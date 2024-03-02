@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import axios from "axios";
 
-const Card = ({ empData, handleReRender }) => {
+const Card = ({ empData, handleReRender, handleEdit }) => {
   const [dropDown, setDropDown] = useState(false);
 
   const handleDelete = async (id) => {

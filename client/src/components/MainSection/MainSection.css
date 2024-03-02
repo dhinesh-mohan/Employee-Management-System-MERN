@@ -76,6 +76,7 @@
   cursor: pointer;
   border-radius: 7px;
   overflow: hidden;
+  border: 0.1px solid gray;
 }
 
 .card-inner {
