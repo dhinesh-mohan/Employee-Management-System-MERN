@@ -11,3 +11,6 @@ ScreenShot 1
 
 ScreenShot 2
 ![Screenshot 2024-03-02 114009](https://github.com/dhinesh-mohan/Employee-Management-System-MERN/assets/122241723/60db8c13-2bd0-4327-8019-f7123060fe3e)
+
+ScreenShot 3
+![Screenshot 2024-03-02 114047](https://github.com/dhinesh-mohan/Employee-Management-System-MERN/assets/122241723/9f247e64-cb36-44ff-aeca-d78fcdb7d775)
