@@ -58,7 +58,9 @@ const MainSection = ({ setEmployeeId }) => {
       )}
       <main className="main-container">
         <div className="main-wrapper">
-          <h1>People</h1>
+          <h1>
+            People <span className="emp-count">{employees.length}</span>
+          </h1>
           <div className="employee-header">
             <div className="search-box">
               <input
